@@ -1,4 +1,9 @@
 trendkit report; window 14d, db trendkit.db (1935 subjects, 16683 observations)
+last collection: huggingface wrote 100 observations at unix 1793175229
+score = stars (GH) / points (HN) / downloads (CR); velocity = Δscore/day
+
+| K | Subject | Lang | Score | V/day |
+|---|---|---|---:|---:|
 | CR | [hashbrown](https://crates.io/crates/hashbrown); A Rust port of Google's SwissTable hash map | - | 2873020930 | 11878838.4 |
 | CR | [syn](https://crates.io/crates/syn); Parser for Rust source code | - | 2818374158 | 11725737.1 |
 | CR | [getrandom](https://crates.io/crates/getrandom); A small cross-platform library for retrieving random data from system source | - | 2399607571 | 10943786.9 |
@@ -24,6 +29,9 @@ trendkit report; window 14d, db trendkit.db (1935 subjects, 16683 observations)
 | CR | [crypto-common](https://crates.io/crates/crypto-common); Common traits used by cryptographic algorithms | - | 1065720823 | 5503030.3 |
 | CR | [serde](https://crates.io/crates/serde); A generic serialization/deserialization framework | - | 1602431895 | 5499312.2 |
 | CR | [itoa](https://crates.io/crates/itoa); Fast integer primitive to string conversion | - | 1541604194 | 5442474.0 |
+
+
+## Persistent (>= 2 distinct days)
 - [CR] hashbrown; 11 day(s), 2873020930 now, 11878838/day
 - [CR] syn; 11 day(s), 2818374158 now, 11725737/day
 - [CR] getrandom; 11 day(s), 2399607571 now, 10943787/day
@@ -49,6 +57,14 @@ trendkit report; window 14d, db trendkit.db (1935 subjects, 16683 observations)
 - [CR] crypto-common; 11 day(s), 1065720823 now, 5503030/day
 - [CR] serde; 11 day(s), 1602431895 now, 5499312/day
 - [CR] itoa; 11 day(s), 1541604194 now, 5442474/day
+
+## Forecast verification: 1916 scored, MAE 709919, band hit 1511/1916 (79%)
+- crate: 899 scored, MAE 1508473, band hit 599/899
+- github_repo: 338 scored, MAE 26, band hit 321/338
+- hf_model: 174 scored, MAE 23443, band hit 149/174
+- hn_story: 505 scored, MAE 0, band hit 442/505
+
+## Forecast: projected next-day delta for 2026-10-29, top 50 of 945 (walk or mean per kind, calibrated band)
 - [Crate] hashbrown; projected +14998929/day (band 10539935 to 19457923)
 - [Crate] syn; projected +14757412/day (band 10464724 to 19050100)
 - [Crate] getrandom; projected +13711202/day (band 9698890 to 17723514)
@@ -99,6 +115,9 @@ trendkit report; window 14d, db trendkit.db (1935 subjects, 16683 observations)
 - [Crate] zerocopy; projected +5541255/day (band 3891807 to 7190703)
 - [Crate] http; projected +5520432/day (band 3860011 to 7180853)
 - [Crate] find-msvc-tools; projected +5502858/day (band 3897027 to 7108688)
+- persisted 945 forecasts made on 2026-10-28; scored 0 due today (0 band hits)
+
+## Integrity: fork-ratio flags
 - x4gpanell/JinX-X4G; 371★/837 forks (225.6%) [extreme]; trust 11 [SUSPECT]
 - storytold/craft-libs; 325★/620 forks (190.8%) [extreme]; trust 0 [SUSPECT]
 - storytold/craft-fonts; 360★/590 forks (163.9%) [extreme]; trust 10 [SUSPECT]
@@ -215,21 +234,28 @@ trendkit report; window 14d, db trendkit.db (1935 subjects, 16683 observations)
 - sitor-ai/frametell; 383★/78 forks (20.4%) [elevated]; trust 93 [trusted]
 - php/php-src; 41608★/8364 forks (20.1%) [elevated]; trust 92 [trusted]
 - Renhuai123/ziwei-doushu; 8031★/1614 forks (20.1%) [elevated]; trust 82 [trusted]
+## Integrity: same-name clone farms
 - `dsh-purge`; 3 orgs, 5969★/5307 forks (88.9%)
 - `ARTEX`; 3 orgs, 2895★/2438 forks (84.2%)
+## Integrity: org bursts
 - @Gathin23; 2 repos, combined 6822/day: Gathin23/cleanyourtv, Gathin23/tv-vibehack
 - @anthropics; 4 repos, combined 1907/day: anthropics/claude-plugins-official, anthropics/knowledge-work-plugins, anthropics/claude-code, anthropics/oss-scanner
 - @storytold; 7 repos, combined 1183/day: storytold/wordcraft, storytold/cadcraft, storytold/gridcraft, storytold/figcraft
 - @Jakeschincariol; 3 repos, combined 513/day: Jakeschincariol/day-trader-skill, Jakeschincariol/trader-skill, Jakeschincariol/founder-skill
+## Integrity: velocity outliers
 - [HF] ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF; 273291.3/day (robust z 53.4)
 - [HF] Comfy-Org/MOSS-Image; 246473.9/day (robust z 48.1)
 - [HF] Comfy-Org/Qwen-Image-2.1; 212073.7/day (robust z 41.3)
 - [HF] Comfy-Org/MiniMax-H3; 205584.1/day (robust z 40.0)
 - [HF] ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF; 156600.2/day (robust z 30.3)
+
+## Shapes (multi-day subjects)
 - ACCELERATING [Crate] humantime; 474484547 now, latest day +1327435
 - ACCELERATING [HfModel] Comfy-Org/MiniMax-H3; 27042104 now, latest day +502356
 - COOLING [Crate] syn; 2818374158 now, latest day +13537791
 - COOLING [Crate] getrandom; 2399607571 now, latest day +12578045
+
+## Trending topics (top 8)
 - conversational; 67 repo(s), +8969815 stars across tracked subjects
 - endpoints_compatible; 69 repo(s), +7491376 stars across tracked subjects
 - image-text-to-text; 44 repo(s), +6954278 stars across tracked subjects
